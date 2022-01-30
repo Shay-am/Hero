@@ -3,14 +3,14 @@ export class Hero {
 
 	constructor(name) {
 		this.name = name;
-		this.incrementpowerCount = this.incrementpowerCount.bind(this);
+		this.incrementPowerCount = this.incrementPowerCount.bind(this);
 		this.getPowerCount = this.getPowerCount.bind(this);
 	}
 	getPowerCount() {
 		return this.#powerCount;
 	}
 
-	incrementpowerCount() {
+	incrementPowerCount() {
 		return this.#powerCount++;
 	}
 }

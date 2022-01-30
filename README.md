@@ -1,6 +1,5 @@
 #Hero
 
-##
+## Clone repository
 
-Postanowiłem, że dokończe zadanie oparte o klasach.
-Poprawiłem plik index.html i ndałem mu 'title'
+Run `https://github.com/Shay-am/Hero.git`

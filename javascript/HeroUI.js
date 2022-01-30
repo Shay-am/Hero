@@ -8,10 +8,10 @@ export class HeroUI {
 		const createDiv = this.createDiv();
 		const createBtn = this.createBtn();
 
-		const { name, incrementpowerCount, getPowerCount } = this.hero;
+		const { name, incrementPowerCount, getPowerCount } = this.hero;
 
 		createBtn.addEventListener("click", () => {
-			incrementpowerCount();
+			incrementPowerCount();
 			createDiv.innerHTML = this.textContentInDiv(name, getPowerCount);
 		});
 
@@ -31,7 +31,7 @@ export class HeroUI {
 		return createDiv;
 	}
 
-	contentTextInDiv(name, getPowerCount) {
+	textContentInDiv(name, getPowerCount) {
 		return `<p>Hero name: ${name}</p><p>${name} power count: ${getPowerCount()}</p>`;
 	}
 }
