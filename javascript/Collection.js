@@ -1,10 +1,11 @@
-import { DomElements } from "./DomElements.js";
 import { HeroUI } from "./HeroUI.js";
 
 export class Collection {
-	constructor() {
+	constructor(container, countContainer) {
 		this.collection = [];
 		this.heroCount = 0;
+		this.heroesContainer = container;
+		this.heroCountContainer = countContainer;
 	}
 	setHeroCount = () => this.heroCount++;
 
@@ -16,13 +17,12 @@ export class Collection {
 		return this.collection.find(hero => hero.name === name);
 	}
 	printHero() {
-		this.PrintHeroCount();
-		const heroesContainer = DomElements.heroesContainer;
+		this.printHeroCount();
 		this.collection.forEach(hero => {
-			return new HeroUI(hero, heroesContainer);
+			return new HeroUI(hero, this.heroesContainer);
 		});
 	}
-	PrintHeroCount() {
-		DomElements.heroCount.textContent = `Hero Count: ${this.heroCount}`;
+	printHeroCount() {
+		this.heroCountContainer.textContent = `Hero Count: ${this.heroCount}`;
 	}
 }

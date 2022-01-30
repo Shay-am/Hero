@@ -1,7 +1,8 @@
 import { Hero } from "./javascript/Hero.js";
 import { Collection } from "./javascript/Collection.js";
+import { heroesContainer, heroCountContainer } from "./javascript/DomElements.js";
 
-const collectionHeroes = new Collection();
+const collectionHeroes = new Collection(heroesContainer, heroCountContainer);
 
 const hulk = new Hero("Hulk");
 const spider = new Hero("Spider");

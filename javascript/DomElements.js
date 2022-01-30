@@ -1,5 +1,2 @@
-export const DomElements = {
-	heroCount: document.querySelector(".heroCount"),
-	heroesContainer: document.querySelector(".heroesContainer"),
-	btn: document.querySelector(".btn"),
-};
+export const heroCountContainer = document.querySelector(".heroCount");
+export const heroesContainer = document.querySelector(".heroesContainer");
